@@ -1,0 +1,540 @@
+body {
+height: 100%; 
+display: flex;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+color: black;
+margin: 0px;
+padding: 0px;
+
+}
+
+#container {
+display: grid;
+width: 100vw;
+grid-template-columns: 1fr 4fr;
+height: 100%;
+
+
+}
+
+#sidebar {
+    display: flex;
+    flex-direction: column;
+    background-color: #00A7E1;
+    
+    color: white;
+    padding-top: 25px;
+    padding-left: 25px;
+    height: 100%;
+    grid-column: 1 / 2;
+    padding-bottom: 50px;
+}
+
+
+#title {
+    display: flex;
+    align-items: center;
+}
+
+
+.title-img {
+    fill: white;
+}
+
+#today-tsk-header, #coming-tsk-header {
+
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+
+}
+
+.notify {
+    display: flex;
+    justify-content: center;
+    z-index: 0;
+    
+    
+}
+
+.notif-circle {
+    fill: #D8CC34;
+    color: white;
+    
+    
+}
+
+.notif-text {
+    
+    margin-left: -1.3rem;
+    z-index: 2;
+    margin-top: 7px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    
+    
+    
+
+}
+
+
+
+.ul-categlist {
+
+    list-style: none;
+     
+}
+
+.categlinks {
+
+    font-weight: bold;
+    cursor: pointer;
+    
+    
+}
+
+.categlinks:hover {
+    color: #D8CC34;
+}
+
+#main-content {
+    display: grid;
+    grid-template-rows: 1fr 3fr;  
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    max-height: 25%;
+  padding: 50px 50px;
+  flex: 0 0 auto;
+  grid-row: 1 / 2;
+  overflow: hidden;
+    
+}
+
+
+
+button#addcat {
+    background-color: #00A7E1;
+    border-style: none;
+    padding-left: 8px;
+    padding-right: 8px;
+
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    font-weight: bold;
+    color: white;
+
+}
+
+#todo-sect {
+    background-color: #CCDDEE;
+    display: flex;
+    row-gap: 15px;
+    column-gap: 75px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 50px;
+    padding-bottom: 25px;
+    height: 100%;
+    grid-row: 2 / 5;
+    flex-wrap: wrap;
+    flex: 1 1 auto; /* Take up remaining space */
+  overflow-y: auto;
+      
+    
+}
+
+
+
+#list-sect, .listsect {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+
+}
+
+#list-heading, .listheading {
+    display: flex;
+    column-gap: 30px;
+    align-items: center;
+    
+}
+
+#list-title, .listtitle {
+    display: flex;
+    align-items: center;
+}
+
+#category-sect-main, .categmainsect {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    
+    
+}
+
+#category-heading-sect, .categheadingdiv {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    
+}
+
+.category-title {
+    display: flex;
+    column-gap: 10px;
+}
+
+.categbtnsectedit, .listbtnsectedit {
+    display: flex;
+    column-gap: 10px;
+    padding-top: 5px;
+
+}
+
+button.addlist {
+
+    background-color: #D8CC34;
+    border-style: none;
+    padding-left: 8px;
+    padding-right: 8px;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    font-weight: bold;
+    color: white;
+    
+
+}
+
+#task-sect, .tasksect {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+
+.card {
+    height: 75%;
+    width: 245px;
+    background-color: white;
+    border-left-color: #E67F0D;
+    border-left-width: 6px;
+    border-left-style: solid;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-bottom: 5px;
+    row-gap: 0px;
+    justify-content: center;
+}
+
+#editdivbtn, .editdivbtn {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -2px;
+    height: 20px;
+    width: 267px;
+    margin-left: 50px;
+
+}
+
+#edit-task, .edittask {
+    width: 100px;
+    height: 40px;
+}
+
+#taskdisplay, .displaytask {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    height: 30px;
+    font-size: smaller;
+    position: relative;
+}
+
+#tsk-txt-div, .tsktxtdiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 5px;
+    
+    height: 25px;
+    
+}
+
+#task-text, .tskTxt {
+display: flex;
+column-gap: 5px;
+align-items: center;
+
+}
+
+#expand-togglediv, .expand-toggle {
+display: flex;
+font-size: smaller;
+
+}
+
+.task-card {
+    position: relative;
+  }
+  
+.formedit {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: hsl(0, 0%, 100%);
+    z-index: 10;
+    padding: 1em;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    gap: 2px;
+    flex-direction: column;
+  }
+
+  input {
+    border-radius: 4px;
+    border-width: 1px;
+  }
+
+#taskeditBtn-sect {
+padding-top: 5px;
+display: flex;
+justify-content: space-evenly;
+  }
+
+#submit-edit-task, #cancel-edit-task {
+
+    border-style: none;
+    background-color: #E67F0D;
+    padding: 8px;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+}
+
+#task-details {
+font-size: small;
+}
+
+#task-edit-div {
+    display: flex;
+}
+
+.priority-label[data-priority="Urgent"] {
+    display: flex;
+    border-radius: 8px;
+    border-color: #720606;
+    color: #720606;
+    border-style: solid;
+    border-width: 2px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 2px;
+    padding-right: 2px;
+    font-weight: bold;
+    font-size: smaller;
+    height: 15px;
+    align-items: center;
+    align-self: flex-end;
+    
+    
+
+
+}
+
+.priority-label[data-priority="Moderate"] {
+    display: flex;
+    border-radius: 8px;
+    border-color: #d8a708;
+    color: #d8a708;
+    border-style: solid;
+    border-width: 2px;
+    padding-left: 2px;
+    padding-right: 2px;
+    font-weight: bold;
+    font-size: smaller;
+    height: 15px;
+    align-items: center;
+}
+
+.priority-label[data-priority="Low"] {
+    display: flex;
+    border-radius: 8px;
+    border-color: #4ad808;
+    color: #4ad808;
+    border-style: solid;
+    border-width: 2px;
+    padding-left: 2px;
+    padding-right: 2px;
+    font-weight: bold;
+    font-size: smaller;
+    height: 15px;
+    align-items: center;
+}
+
+.priority-label[data-priority="None"] {
+    display: flex;
+     border-radius: 8px;
+    border-color: #5f5e5e;
+    color: #5f5e5e;
+    border-style: solid;
+    border-width: 2px;
+    padding-left: 2px;
+    padding-right: 2px;
+    font-weight: bold;
+    font-size: smaller;
+    height: 15px;
+    align-items: center;
+}
+
+button#edit-task, .edittask {
+    display: flex;
+    border-style: none;
+    padding: 8px;
+    background-color: transparent;
+}
+
+
+
+.newtaskbtn {
+    background-color: #E67F0D;
+    border-style: none;
+    padding-left: 8px;
+    padding-right: 8px;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    font-weight: bold;
+    color: white;
+    column-gap: 5px;
+}
+
+
+.formaddtsk {
+    display: flex;
+    flex-direction: column;
+font-size: small;
+    font-weight: bold;
+    row-gap: 10px;
+
+}
+#add-tsk-label {
+    display: flex;
+    column-gap: 10px;
+    
+}
+
+#add-tskdetails-label {
+    display: flex;
+    flex-direction: column;
+}
+
+#add-tskdate-label {
+
+    display: flex;
+    column-gap: 10px;
+}
+
+#add-tskpriority-label {
+    display: flex;
+    column-gap: 5px;
+
+}
+
+.addctgry, .addlst, .addnewtsk {
+
+    fill: white;
+}
+
+
+.editdisplayedtskbtn, .deletetskbtn, .editcateg, .deletecateg, .deletelist, .editlist {
+    background-color: transparent;
+    border-style: none;
+}
+
+#addcateg, #addlist-dialog, #addtsk-dialog {
+    display: flex;
+row-gap: 25px;
+border-radius: 8px;
+border-style: none;
+flex-direction: column;
+
+}
+
+
+#add-categ-label, #add-list-label {
+display: flex;
+column-gap: 10px;
+font-weight: bold;
+font-size: small;
+
+}
+
+#addcategBtn-sect, #addlistBtn-sect, #addtskBtn-sect {
+display: flex;
+column-gap: 5px;
+padding-top: 10px;
+
+}
+
+
+
+#submit-categ-name, #cancel-addcateg-name, #submit-edit-categ, #cancel-edit-categ {
+    background-color: #00A7E1;
+    border-style: none;
+    border-radius: 8px;
+    padding: 8px;
+    color: white;
+}
+
+
+#submit-list-name, #cancel-addlist-name, #cancel-edit-list, #submit-edit-list {
+
+    background-color: #D8CC34;
+    border-style: none;
+    border-radius: 8px;
+    padding: 8px;
+    color: white;
+
+}
+
+#cancel-addtsk-name, #submit-tsk-name {
+
+    background-color: #E67F0D;
+    border-style: none;
+    border-radius: 8px;
+    padding: 8px;
+    color: white;
+}
+
+
+.checked {
+    fill: grey;
+    z-index: 2;
+    
+    
+}
+
+.crossed-out, .crossed-out-2 {
+
+    color: gray;
+  text-decoration: line-through;
+
+}
